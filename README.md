@@ -11,6 +11,7 @@ Running the script
 run  sumologic.pl from same folder as ypur config file 
 
 Search
+
 PC-1#   ./sumologic.pl -s ma_sandbox
 id: 100022346 Host: ma_sandbox_app_i_d4fa
 id: 100022428 Host: ma_sandbox_app_i_c9ec
@@ -18,7 +19,10 @@ id: 100023236 Host: ma_sandbox_app_i_5c7e
 id: 100023239 Host: ma_sandbox_app_i_bc9d
 
 
-List  log sources configured for all your collectors returned by the search 
+List
+
+log sources configured for all your collectors returned by the search 
+
 PC-1# ./sumologic.pl -v ma_sandbox_app_i_5e
 
 ma_sandbox_app_i_5e
@@ -30,6 +34,7 @@ ma_sandbox_app_i_5e
 	Syslog File: /var/log/syslog
 
 Add a new source for all returned by your search 
+
 Only Nginx and rails (passenger) at the moment till I have time to add more. 
 
 PC-1#  ./sumologic.pl -s ma_sandbox_app_i_5e  -add nginx
